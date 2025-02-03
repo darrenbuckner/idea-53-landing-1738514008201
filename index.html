@@ -6,45 +6,75 @@
     <title>Podcasts for Kids by AI - Executive Summary</title>
     <meta name="description" content="An AI-powered subscription service that transforms daily routines into engaging, educational audio experiences for children.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 65ch;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
         .section-card {
-            @apply bg-white rounded-lg shadow-sm p-6 mb-6;
+            @apply bg-white rounded-lg shadow-sm p-8 mb-12;
         }
         .section-title {
-            @apply text-xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200;
+            @apply text-2xl font-bold text-gray-900 mb-6 pb-3 border-b border-gray-200;
+            letter-spacing: -0.025em;
         }
         .subsection-title {
-            @apply text-lg font-semibold text-gray-800 mb-2;
+            @apply text-xl font-semibold text-gray-800 mb-3 mt-8;
+            letter-spacing: -0.025em;
+        }
+        .prose {
+            @apply text-gray-600 leading-relaxed;
+        }
+        .prose p {
+            @apply mb-6;
         }
         .metric-card {
-            @apply bg-gray-50 rounded-lg p-4 mb-4;
+            @apply bg-gray-50 rounded-lg p-6 mb-6;
         }
         .metric-header {
-            @apply flex justify-between items-center mb-2;
+            @apply flex justify-between items-start mb-4;
         }
         .metric-title {
-            @apply font-semibold text-gray-900;
+            @apply font-semibold text-gray-900 text-lg;
+            letter-spacing: -0.025em;
         }
         .metric-weight {
-            @apply text-sm text-gray-500;
+            @apply text-sm text-gray-500 mt-1;
         }
         .metric-score {
-            @apply text-2xl font-bold text-indigo-600;
+            @apply text-3xl font-bold;
+            letter-spacing: -0.025em;
+        }
+        .metric-score.high {
+            @apply text-green-600;
+        }
+        .metric-score.medium {
+            @apply text-yellow-600;
+        }
+        .metric-score.low {
+            @apply text-red-600;
         }
         .metric-reasoning {
-            @apply mt-2 text-gray-700 text-sm;
+            @apply text-gray-600 text-base leading-relaxed;
         }
         .tag {
-            @apply inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full mr-2 mb-2;
+            @apply inline-block bg-indigo-50 text-indigo-700 text-sm px-3 py-1 rounded-full mr-2 mb-2 font-medium;
         }
         .version-info {
-            @apply text-xs text-gray-500;
+            @apply text-sm text-gray-500;
         }
         .version-badge {
-            @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800;
+            @apply inline-flex items-center px-2.5 py-1 rounded text-sm font-medium bg-gray-100 text-gray-800;
         }
         .priority-score {
-            @apply text-4xl font-bold;
+            @apply text-5xl font-bold mb-2;
+            letter-spacing: -0.05em;
         }
         .priority-high {
             @apply text-green-600;
@@ -56,24 +86,29 @@
             @apply text-red-600;
         }
         pre {
-            @apply bg-gray-50 p-4 rounded-lg text-sm overflow-x-auto;
+            @apply bg-gray-50 p-4 rounded-lg text-sm overflow-x-auto my-4 leading-relaxed;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+        .header-content {
+            max-width: 65ch;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
     <div class="min-h-screen">
         <!-- Header -->
-        <header class="bg-white shadow-sm border-b border-gray-200">
-            <div class="max-w-5xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <div class="text-sm text-gray-500 mb-1">Consumer</div>
-                        <h1 class="text-3xl font-bold text-gray-900">Podcasts for Kids by AI</h1>
+        <header class="bg-white shadow-sm border-b border-gray-200 mb-12">
+            <div class="header-content px-4 py-8 sm:px-6 lg:px-8">
+                <div class="space-y-4">
+                    <div class="space-y-2">
+                        <div class="text-sm text-gray-500">Consumer</div>
+                        <h1 class="text-4xl font-bold text-gray-900 tracking-tight">Podcasts for Kids by AI</h1>
                         <div class="version-info mt-2">
                             Last updated: February 3, 2025
                         </div>
                     </div>
-                    <div class="flex items-center space-x-2">
+                    <div class="flex flex-wrap items-center -mb-2">
                         <span class="tag">AI</span>
                         <span class="tag">Education</span>
                         <span class="tag">Audio</span>
@@ -87,20 +122,20 @@
             </div>
         </header>
 
-        <main class="max-w-5xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <main class="container">
             <!-- Executive Overview Section -->
             <div class="section-card">
                 <h2 class="section-title">Executive Overview</h2>
-                <div class="prose max-w-none">
-                    <p class="text-lg text-gray-700 mb-6">An AI-powered subscription service that transforms daily routines into engaging, educational audio experiences for children.</p>
-                    <div class="grid md:grid-cols-2 gap-6">
+                <div class="prose">
+                    <p class="text-xl mb-8">An AI-powered subscription service that transforms daily routines into engaging, educational audio experiences for children.</p>
+                    <div class="grid md:grid-cols-2 gap-8">
                         <div>
                             <h3 class="subsection-title">Problem Statement</h3>
-                            <p class="text-gray-600">Parents struggle to find consistently high-quality, personalized educational content for their children that reduces screen time, and traditional content production is costly and time-consuming.</p>
+                            <p>Parents struggle to find consistently high-quality, personalized educational content for their children that reduces screen time, and traditional content production is costly and time-consuming.</p>
                         </div>
                         <div>
                             <h3 class="subsection-title">Solution Statement</h3>
-                            <p class="text-gray-600">Utilize AI to create engaging, personalized educational audio stories that entertain children during daily routines like car rides and bedtime, offering an affordable and ever-fresh alternative to traditional production methods.</p>
+                            <p>Utilize AI to create engaging, personalized educational audio stories that entertain children during daily routines like car rides and bedtime, offering an affordable and ever-fresh alternative to traditional production methods.</p>
                         </div>
                     </div>
                 </div>
@@ -109,14 +144,14 @@
             <!-- Market Analysis Section -->
             <div class="section-card">
                 <h2 class="section-title">Market Analysis</h2>
-                <div class="space-y-6">
+                <div class="prose">
                     <div>
                         <h3 class="subsection-title">Market Opportunity</h3>
-                        <p class="text-gray-600">The target market includes parents of children aged 4-10 who are increasingly seeking educational, non-screen alternatives for their kids. The growing demand for edtech and personalized learning solutions, combined with the subscription model, presents a significant market opportunity with potential for international expansion and multi-language support.</p>
+                        <p>The target market includes parents of children aged 4-10 who are increasingly seeking educational, non-screen alternatives for their kids. The growing demand for edtech and personalized learning solutions, combined with the subscription model, presents a significant market opportunity with potential for international expansion and multi-language support.</p>
                     </div>
                     <div>
                         <h3 class="subsection-title">Competitive Landscape</h3>
-                        <p class="text-gray-600">{
+                        <p>{
   &quot;analysis&quot;: &quot;While there are platforms offering audio storytelling and children’s content, few specifically target personalized, AI-driven educational audio experiences. This differentiation gives the idea a competitive edge despite existing content providers.&quot;,
   &quot;competitors&quot;: [
     {
@@ -139,7 +174,7 @@
                     </div>
                     <div>
                         <h3 class="subsection-title">Go-to-Market Strategy</h3>
-                        <p class="text-gray-600">Focus initially on digital marketing targeting parents via social media, parenting blogs, and educational forums. Leverage partnerships with schools and pediatric educational organizations to build trust. Launch a freemium model to attract early users, then convert them to a subscription model once product engagement is proven.</p>
+                        <p>Focus initially on digital marketing targeting parents via social media, parenting blogs, and educational forums. Leverage partnerships with schools and pediatric educational organizations to build trust. Launch a freemium model to attract early users, then convert them to a subscription model once product engagement is proven.</p>
                     </div>
                 </div>
             </div>
@@ -152,9 +187,12 @@
                 <div class="metric-card">
                     <div class="metric-header">
                         <div>
-                            <h3 class="metric-title">Market Potential (40%)</h3>
+                            <h3 class="metric-title">Market Potential</h3>
+                            <div class="metric-weight">Weight: 40%</div>
                         </div>
-                        <div class="metric-score">85</div>
+                        <div class="metric-score high">
+                            85
+                        </div>
                     </div>
                     <p class="metric-reasoning">There is a large and growing market in the edtech sector, particularly among parents seeking high-quality, screen-free, and educational content for children. The subscription model offers a recurring revenue potential, and the concept taps into a niche yet expanding market that values personalized learning experiences.</p>
                 </div>
@@ -163,9 +201,12 @@
                 <div class="metric-card">
                     <div class="metric-header">
                         <div>
-                            <h3 class="metric-title">Execution Feasibility (30%)</h3>
+                            <h3 class="metric-title">Execution Feasibility</h3>
+                            <div class="metric-weight">Weight: 30%</div>
                         </div>
-                        <div class="metric-score">75</div>
+                        <div class="metric-score medium">
+                            75
+                        </div>
                     </div>
                     <p class="metric-reasoning">While AI technology has advanced enough for content personalization and audio generation, integrating professional narration, sound effects, and maintaining high quality across multiple languages and topics poses technical challenges. However, with current AI tools and cloud infrastructure, the execution is feasible with the right technical team and resources.</p>
                 </div>
@@ -174,17 +215,20 @@
                 <div class="metric-card">
                     <div class="metric-header">
                         <div>
-                            <h3 class="metric-title">Competitive Advantage (30%)</h3>
+                            <h3 class="metric-title">Competitive Advantage</h3>
+                            <div class="metric-weight">Weight: 30%</div>
                         </div>
-                        <div class="metric-score">80</div>
+                        <div class="metric-score high">
+                            80
+                        </div>
                     </div>
                     <p class="metric-reasoning">The platform’s unique value lies in its AI-driven personalization, rapid content generation and delivery, and focus on educational value without screen exposure. There are some competitors in the audio storytelling and edtech space, but few, if any, offer the same level of customization and cost-efficiency, providing a significant barrier to entry for others.</p>
                 </div>
 
                 <!-- Overall Score -->
-                <div class="bg-white rounded-lg p-6 text-center">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Overall Priority Score</h3>
-                    <p class="text-sm text-gray-600 mb-4">Weighted assessment based on market potential, execution feasibility, and competitive advantage</p>
+                <div class="bg-white rounded-lg p-8 text-center mt-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Overall Priority Score</h3>
+                    <p class="text-gray-600 mb-6">Weighted assessment based on market potential, execution feasibility, and competitive advantage</p>
                     <div class="priority-score priority-high">
                         81
                     </div>
@@ -193,9 +237,9 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-white border-t border-gray-200 mt-12">
-            <div class="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col items-center space-y-2">
+        <footer class="bg-white border-t border-gray-200 mt-16">
+            <div class="container py-8">
+                <div class="flex flex-col items-center space-y-3">
                     <p class="text-center text-sm text-gray-500">
                         Generated on February 2, 2025 • © 2025 Podcasts for Kids by AI
                     </p>
