@@ -5,255 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcasts for Kids by AI - Executive Summary</title>
     <meta name="description" content="An AI-powered subscription service that transforms daily routines into engaging, educational audio experiences for children.">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
         }
         .container {
             max-width: 65ch;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 2rem 1rem;
         }
-        .section-card {
-            @apply bg-white rounded-lg shadow-sm p-8 mb-12;
+        section {
+            margin-bottom: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
         }
-        .section-title {
-            @apply text-2xl font-bold text-gray-900 mb-6 pb-3 border-b border-gray-200;
-            letter-spacing: -0.025em;
+        h1 {
+            margin-bottom: 1rem;
         }
-        .subsection-title {
-            @apply text-xl font-semibold text-gray-800 mb-3 mt-8;
-            letter-spacing: -0.025em;
+        h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
-        .prose {
-            @apply text-gray-600 leading-relaxed;
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
         }
-        .prose p {
-            @apply mb-6;
-        }
-        .metric-card {
-            @apply bg-gray-50 rounded-lg p-6 mb-6;
-        }
-        .metric-header {
-            @apply flex justify-between items-start mb-4;
-        }
-        .metric-title {
-            @apply font-semibold text-gray-900 text-lg;
-            letter-spacing: -0.025em;
-        }
-        .metric-weight {
-            @apply text-sm text-gray-500 mt-1;
-        }
-        .metric-score {
-            @apply text-3xl font-bold;
-            letter-spacing: -0.025em;
-        }
-        .metric-score.high {
-            @apply text-green-600;
-        }
-        .metric-score.medium {
-            @apply text-yellow-600;
-        }
-        .metric-score.low {
-            @apply text-red-600;
-        }
-        .metric-reasoning {
-            @apply text-gray-600 text-base leading-relaxed;
-        }
-        .tag {
-            @apply inline-block bg-indigo-50 text-indigo-700 text-sm px-3 py-1 rounded-full mr-2 mb-2 font-medium;
-        }
-        .version-info {
-            @apply text-sm text-gray-500;
-        }
-        .version-badge {
-            @apply inline-flex items-center px-2.5 py-1 rounded text-sm font-medium bg-gray-100 text-gray-800;
-        }
-        .priority-score {
-            @apply text-5xl font-bold mb-2;
-            letter-spacing: -0.05em;
-        }
-        .priority-high {
-            @apply text-green-600;
-        }
-        .priority-medium {
-            @apply text-yellow-600;
-        }
-        .priority-low {
-            @apply text-red-600;
-        }
-        pre {
-            @apply bg-gray-50 p-4 rounded-lg text-sm overflow-x-auto my-4 leading-relaxed;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-        }
-        .header-content {
-            max-width: 65ch;
-            margin: 0 auto;
+        p {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <div class="min-h-screen">
-        <!-- Header -->
-        <header class="bg-white shadow-sm border-b border-gray-200 mb-12">
-            <div class="header-content px-4 py-8 sm:px-6 lg:px-8">
-                <div class="space-y-4">
-                    <div class="space-y-2">
-                        <div class="text-sm text-gray-500">Consumer</div>
-                        <h1 class="text-4xl font-bold text-gray-900 tracking-tight">Podcasts for Kids by AI</h1>
-                        <div class="version-info mt-2">
-                            Last updated: February 3, 2025
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap items-center -mb-2">
-                        <span class="tag">AI</span>
-                        <span class="tag">Education</span>
-                        <span class="tag">Audio</span>
-                        <span class="tag">Subscription</span>
-                        <span class="tag">Personalization</span>
-                        <span class="tag">Kids</span>
-                        <span class="tag">Storytelling</span>
-                        <span class="tag">EdTech</span>
-                    </div>
-                </div>
+<body>
+    <div class="container">
+        <section>
+            <h1>Podcasts for Kids by AI</h1>
+            <div>Consumer</div>
+            <div>Last updated: February 3, 2025</div>
+            <div>
+                <span>AI</span>
+                <span>Education</span>
+                <span>Audio</span>
+                <span>Subscription</span>
+                <span>Personalization</span>
+                <span>Kids</span>
+                <span>Storytelling</span>
+                <span>EdTech</span>
             </div>
-        </header>
+        </section>
 
-        <main class="container">
-            <!-- Executive Overview Section -->
-            <div class="section-card">
-                <h2 class="section-title">Executive Overview</h2>
-                <div class="prose">
-                    <p class="text-xl mb-8">An AI-powered subscription service that transforms daily routines into engaging, educational audio experiences for children.</p>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="subsection-title">Problem Statement</h3>
-                            <p>Parents struggle to find consistently high-quality, personalized educational content for their children that reduces screen time, and traditional content production is costly and time-consuming.</p>
-                        </div>
-                        <div>
-                            <h3 class="subsection-title">Solution Statement</h3>
-                            <p>Utilize AI to create engaging, personalized educational audio stories that entertain children during daily routines like car rides and bedtime, offering an affordable and ever-fresh alternative to traditional production methods.</p>
-                        </div>
-                    </div>
-                </div>
+        <section>
+            <h2>Executive Overview</h2>
+            <p>An AI-powered subscription service that transforms daily routines into engaging, educational audio experiences for children.</p>
+            <div>
+                <h3>Problem Statement</h3>
+                <p>Parents struggle to find consistently high-quality, personalized educational content for their children that reduces screen time, and traditional content production is costly and time-consuming.</p>
+                <h3>Solution Statement</h3>
+                <p>Utilize AI to create engaging, personalized educational audio stories that entertain children during daily routines like car rides and bedtime, offering an affordable and ever-fresh alternative to traditional production methods.</p>
             </div>
+        </section>
 
-            <!-- Market Analysis Section -->
-            <div class="section-card">
-                <h2 class="section-title">Market Analysis</h2>
-                <div class="prose">
-                    <div>
-                        <h3 class="subsection-title">Market Opportunity</h3>
-                        <p>The target market includes parents of children aged 4-10 who are increasingly seeking educational, non-screen alternatives for their kids. The growing demand for edtech and personalized learning solutions, combined with the subscription model, presents a significant market opportunity with potential for international expansion and multi-language support.</p>
-                    </div>
-                    <div>
-                        <h3 class="subsection-title">Competitive Landscape</h3>
-                        <p>While there are platforms offering audio storytelling and children’s content, few specifically target personalized, AI-driven educational audio experiences. This differentiation gives the idea a competitive edge despite existing content providers.</p>
-                        
-                        <div class="mt-6 space-y-6">
-                            <div class="bg-gray-50 rounded-lg p-4">
-                                <div class="flex items-center justify-between mb-2">
-                                    <h4 class="font-semibold text-gray-900">Storynory</h4>
-                                    <a href="https://www.storynory.com" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm">Visit website</a>
-                                </div>
-                                <p class="text-gray-600 text-sm">Offers free audio stories for children, though not personalized or subscription-based.</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-4">
-                                <div class="flex items-center justify-between mb-2">
-                                    <h4 class="font-semibold text-gray-900">Audible Kids</h4>
-                                    <a href="https://www.audible.com/kids" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm">Visit website</a>
-                                </div>
-                                <p class="text-gray-600 text-sm">Provides a selection of children’s audiobooks, but lacks personalized educational content driven by AI.</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-4">
-                                <div class="flex items-center justify-between mb-2">
-                                    <h4 class="font-semibold text-gray-900">Spotify Kids</h4>
-                                    <a href="https://www.spotify.com/us/kids/" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm">Visit website</a>
-                                </div>
-                                <p class="text-gray-600 text-sm">A tailored version of Spotify content for children, but primarily focused on music and generic podcasts rather than specifically educational story content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="subsection-title">Go-to-Market Strategy</h3>
-                        <p>Focus initially on digital marketing targeting parents via social media, parenting blogs, and educational forums. Leverage partnerships with schools and pediatric educational organizations to build trust. Launch a freemium model to attract early users, then convert them to a subscription model once product engagement is proven.</p>
-                    </div>
-                </div>
+        <section>
+            <h2>Market Analysis</h2>
+            <div>
+                <h3>Market Opportunity</h3>
+                <p>The target market includes parents of children aged 4-10 who are increasingly seeking educational, non-screen alternatives for their kids. The growing demand for edtech and personalized learning solutions, combined with the subscription model, presents a significant market opportunity with potential for international expansion and multi-language support.</p>
             </div>
-
-            <!-- Assessment Metrics Section -->
-            <div class="section-card">
-                <h2 class="section-title">Assessment Metrics</h2>
+            <div>
+                <h3>Competitive Landscape</h3>
+                <p>While there are platforms offering audio storytelling and children’s content, few specifically target personalized, AI-driven educational audio experiences. This differentiation gives the idea a competitive edge despite existing content providers.</p>
                 
-                <!-- Market Potential -->
-                <div class="metric-card">
-                    <div class="metric-header">
+                <div>
+                    <div>
                         <div>
-                            <h3 class="metric-title">Market Potential</h3>
-                            <div class="metric-weight">Weight: 40%</div>
+                            <h4>Storynory</h4>
+                            <a href="https://www.storynory.com" target="_blank">Visit website</a>
                         </div>
-                        <div class="metric-score high">
-                            85
-                        </div>
+                        <p>Offers free audio stories for children, though not personalized or subscription-based.</p>
                     </div>
-                    <p class="metric-reasoning">There is a large and growing market in the edtech sector, particularly among parents seeking high-quality, screen-free, and educational content for children. The subscription model offers a recurring revenue potential, and the concept taps into a niche yet expanding market that values personalized learning experiences.</p>
-                </div>
-
-                <!-- Execution Feasibility -->
-                <div class="metric-card">
-                    <div class="metric-header">
+                    <div>
                         <div>
-                            <h3 class="metric-title">Execution Feasibility</h3>
-                            <div class="metric-weight">Weight: 30%</div>
+                            <h4>Audible Kids</h4>
+                            <a href="https://www.audible.com/kids" target="_blank">Visit website</a>
                         </div>
-                        <div class="metric-score medium">
-                            75
-                        </div>
+                        <p>Provides a selection of children’s audiobooks, but lacks personalized educational content driven by AI.</p>
                     </div>
-                    <p class="metric-reasoning">While AI technology has advanced enough for content personalization and audio generation, integrating professional narration, sound effects, and maintaining high quality across multiple languages and topics poses technical challenges. However, with current AI tools and cloud infrastructure, the execution is feasible with the right technical team and resources.</p>
-                </div>
-
-                <!-- Competitive Advantage -->
-                <div class="metric-card">
-                    <div class="metric-header">
+                    <div>
                         <div>
-                            <h3 class="metric-title">Competitive Advantage</h3>
-                            <div class="metric-weight">Weight: 30%</div>
+                            <h4>Spotify Kids</h4>
+                            <a href="https://www.spotify.com/us/kids/" target="_blank">Visit website</a>
                         </div>
-                        <div class="metric-score high">
-                            80
-                        </div>
-                    </div>
-                    <p class="metric-reasoning">The platform’s unique value lies in its AI-driven personalization, rapid content generation and delivery, and focus on educational value without screen exposure. There are some competitors in the audio storytelling and edtech space, but few, if any, offer the same level of customization and cost-efficiency, providing a significant barrier to entry for others.</p>
-                </div>
-
-                <!-- Overall Score -->
-                <div class="bg-white rounded-lg p-8 text-center mt-8">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Overall Priority Score</h3>
-                    <p class="text-gray-600 mb-6">Weighted assessment based on market potential, execution feasibility, and competitive advantage</p>
-                    <div class="priority-score priority-high">
-                        81
+                        <p>A tailored version of Spotify content for children, but primarily focused on music and generic podcasts rather than specifically educational story content.</p>
                     </div>
                 </div>
             </div>
-        </main>
+            <div>
+                <h3>Go-to-Market Strategy</h3>
+                <p>Focus initially on digital marketing targeting parents via social media, parenting blogs, and educational forums. Leverage partnerships with schools and pediatric educational organizations to build trust. Launch a freemium model to attract early users, then convert them to a subscription model once product engagement is proven.</p>
+            </div>
+        </section>
 
-        <!-- Footer -->
-        <footer class="bg-white border-t border-gray-200 mt-16">
-            <div class="container py-8">
-                <div class="flex flex-col items-center space-y-3">
-                    <p class="text-center text-sm text-gray-500">
-                        Generated on February 2, 2025 • © 2025 Podcasts for Kids by AI
-                    </p>
-                    <div class="version-info">
-                        <a href="versions.json" class="hover:text-gray-700">View version history</a>
-                    </div>
+        <section>
+            <h2>Assessment Metrics</h2>
+            
+            <div>
+                <h3>Market Potential (Weight: 40%)</h3>
+                <div>Score: 85</div>
+                <p>There is a large and growing market in the edtech sector, particularly among parents seeking high-quality, screen-free, and educational content for children. The subscription model offers a recurring revenue potential, and the concept taps into a niche yet expanding market that values personalized learning experiences.</p>
+            </div>
+
+            <div>
+                <h3>Execution Feasibility (Weight: 30%)</h3>
+                <div>Score: 75</div>
+                <p>While AI technology has advanced enough for content personalization and audio generation, integrating professional narration, sound effects, and maintaining high quality across multiple languages and topics poses technical challenges. However, with current AI tools and cloud infrastructure, the execution is feasible with the right technical team and resources.</p>
+            </div>
+
+            <div>
+                <h3>Competitive Advantage (Weight: 30%)</h3>
+                <div>Score: 80</div>
+                <p>The platform’s unique value lies in its AI-driven personalization, rapid content generation and delivery, and focus on educational value without screen exposure. There are some competitors in the audio storytelling and edtech space, but few, if any, offer the same level of customization and cost-efficiency, providing a significant barrier to entry for others.</p>
+            </div>
+
+            <div>
+                <h3>Overall Priority Score</h3>
+                <p>Weighted assessment based on market potential, execution feasibility, and competitive advantage</p>
+                <div>81</div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <p>Generated on February 2, 2025 • © 2025 Podcasts for Kids by AI</p>
+                <div>
+                    <a href="versions.json">View version history</a>
                 </div>
             </div>
-        </footer>
+        </section>
     </div>
 </body>
 </html> 
