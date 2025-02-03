@@ -3,121 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stories for Kids by AI</title>
-    <meta name="description" content="An AI-powered subscription service that transforms daily routines into engaging, educational audio experiences for children.">
+    <title>Podcasts for Kids by AI - Executive Summary</title>
+    <meta name="description" content="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+    <style>
+        .section-card {
+            @apply bg-white rounded-lg shadow-sm p-6 mb-6;
+        }
+        .section-title {
+            @apply text-xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200;
+        }
+        .subsection-title {
+            @apply text-lg font-semibold text-gray-800 mb-2;
+        }
+        .metric-card {
+            @apply bg-gray-50 rounded-lg p-4;
+        }
+        .metric-value {
+            @apply text-2xl font-bold text-indigo-600;
+        }
+        .tag {
+            @apply inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full mr-2 mb-2;
+        }
+        .version-info {
+            @apply text-xs text-gray-500;
+        }
+        .version-badge {
+            @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
-    <div x-data="{ showSuccess: false }" class="min-h-screen">
-        <!-- Hero Section -->
-        <header class="bg-white shadow-sm">
-            <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold text-gray-900">Stories for Kids by AI</h1>
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b border-gray-200">
+            <div class="max-w-5xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="text-sm text-gray-500 mb-1">Consumer</div>
+                        <h1 class="text-3xl font-bold text-gray-900">Podcasts for Kids by AI</h1>
+                        <div class="version-info mt-2">
+                            Last updated: February 3, 2025
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="tag">AI</span>
+                        <span class="tag">Education</span>
+                        <span class="tag">Audio</span>
+                        <span class="tag">Subscription</span>
+                        <span class="tag">Personalization</span>
+                        <span class="tag">Kids</span>
+                        <span class="tag">Storytelling</span>
+                        <span class="tag">EdTech</span>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <main>
-            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                <!-- Vision Section -->
-                <div class="text-center mb-16">
-                    <p class="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                        An AI-powered subscription service that transforms daily routines into engaging, educational audio experiences for children.
-                    </p>
-                </div>
-
-                <!-- Problem & Solution Grid -->
-                <div class="mt-12 grid gap-8 lg:grid-cols-2">
-                    <!-- Problem Section -->
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h2 class="text-lg font-medium text-gray-900 mb-4">The Problem</h2>
+        <main class="max-w-5xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <!-- Executive Overview Section -->
+            <div class="section-card">
+                <h2 class="section-title">Executive Overview</h2>
+                <div class="prose max-w-none">
+                    <p class="text-lg text-gray-700 mb-6">An AI-powered subscription service that transforms daily routines into engaging, educational audio experiences for children.</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="subsection-title">Problem Statement</h3>
                             <p class="text-gray-600">Parents struggle to find consistently high-quality, personalized educational content for their children that reduces screen time, and traditional content production is costly and time-consuming.</p>
                         </div>
-                    </div>
-
-                    <!-- Solution Section -->
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h2 class="text-lg font-medium text-gray-900 mb-4">Our Solution</h2>
+                        <div>
+                            <h3 class="subsection-title">Solution Statement</h3>
                             <p class="text-gray-600">Utilize AI to create engaging, personalized educational audio stories that entertain children during daily routines like car rides and bedtime, offering an affordable and ever-fresh alternative to traditional production methods.</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Waitlist Form -->
-                <div class="mt-16 bg-white overflow-hidden shadow rounded-lg max-w-2xl mx-auto">
-                    <div class="px-4 py-5 sm:p-6">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Join the Waitlist</h2>
-                        <form 
-                            x-on:submit.prevent="
-                                fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
-                                    method: 'POST',
-                                    body: new FormData($event.target)
-                                })
-                                .then(() => {
-                                    showSuccess = true;
-                                    $event.target.reset();
-                                })
-                            "
-                            class="space-y-6"
-                        >
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700">
-                                    Email address
-                                </label>
-                                <div class="mt-1">
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        id="email"
-                                        class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                                        placeholder="you@example.com"
-                                        required
-                                    >
-                                </div>
-                            </div>
-
-                            <div>
-                                <button
-                                    type="submit"
-                                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                >
-                                    Join Waitlist
-                                </button>
-                            </div>
-                        </form>
-
-                        <!-- Success Message -->
-                        <div
-                            x-show="showSuccess"
-                            x-transition
-                            class="mt-4 p-4 bg-green-50 rounded-md"
-                        >
-                            <div class="flex">
-                                <div class="flex-shrink-0">
-                                    <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                </div>
-                                <div class="ml-3">
-                                    <p class="text-sm font-medium text-green-800">
-                                        Thanks for joining! We'll keep you updated.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Market Analysis Section -->
+            <div class="section-card">
+                <h2 class="section-title">Market Analysis</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="subsection-title">Market Opportunity</h3>
+                        <p class="text-gray-600">The target market includes parents of children aged 4-10 who are increasingly seeking educational, non-screen alternatives for their kids. The growing demand for edtech and personalized learning solutions, combined with the subscription model, presents a significant market opportunity with potential for international expansion and multi-language support.</p>
                     </div>
+                    <div>
+                        <h3 class="subsection-title">Competitive Landscape</h3>
+                        <p class="text-gray-600">[object Object]</p>
+                    </div>
+                    <div>
+                        <h3 class="subsection-title">Go-to-Market Strategy</h3>
+                        <p class="text-gray-600">Focus initially on digital marketing targeting parents via social media, parenting blogs, and educational forums. Leverage partnerships with schools and pediatric educational organizations to build trust. Launch a freemium model to attract early users, then convert them to a subscription model once product engagement is proven.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assessment Metrics -->
+            <div class="section-card">
+                <h2 class="section-title">Assessment Metrics</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="metric-card">
+                        <h3 class="text-sm font-medium text-gray-500 mb-1">Market Potential (40%)</h3>
+                        <div class="metric-value">85</div>
+                        <p class="text-sm text-gray-600 mt-2">There is a large and growing market in the edtech sector, particularly among parents seeking high-quality, screen-free, and educational content for children. The subscription model offers a recurring revenue potential, and the concept taps into a niche yet expanding market that values personalized learning experiences.</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3 class="text-sm font-medium text-gray-500 mb-1">Execution Feasibility (30%)</h3>
+                        <div class="metric-value">75</div>
+                        <p class="text-sm text-gray-600 mt-2">While AI technology has advanced enough for content personalization and audio generation, integrating professional narration, sound effects, and maintaining high quality across multiple languages and topics poses technical challenges. However, with current AI tools and cloud infrastructure, the execution is feasible with the right technical team and resources.</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3 class="text-sm font-medium text-gray-500 mb-1">Competitive Advantage (30%)</h3>
+                        <div class="metric-value">80</div>
+                        <p class="text-sm text-gray-600 mt-2">The platform’s unique value lies in its AI-driven personalization, rapid content generation and delivery, and focus on educational value without screen exposure. There are some competitors in the audio storytelling and edtech space, but few, if any, offer the same level of customization and cost-efficiency, providing a significant barrier to entry for others.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Score -->
+            <div class="section-card">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">Overall Priority Score</h2>
+                        <p class="text-gray-600 mt-1">Weighted assessment based on market potential, execution feasibility, and competitive advantage</p>
+                    </div>
+                    <div class="text-5xl font-bold text-indigo-600">81</div>
                 </div>
             </div>
         </main>
 
         <!-- Footer -->
-        <footer class="bg-white mt-12">
-            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                <p class="text-center text-gray-500 text-sm">
-                    © 2024 Stories for Kids by AI. All rights reserved.
-                </p>
+        <footer class="bg-white border-t border-gray-200 mt-12">
+            <div class="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center space-y-2">
+                    <p class="text-center text-sm text-gray-500">
+                        Generated on February 2, 2025 • © 2025 Podcasts for Kids by AI
+                    </p>
+                    <div class="version-info">
+                        <a href="versions.json" class="hover:text-gray-700">View version history</a>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>
