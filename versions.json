@@ -1,0 +1,13 @@
+{
+  "versions": [
+    {
+      "version": 1,
+      "date": "2025-02-03T20:01:56.520Z",
+      "type": "update",
+      "description": "Updated landing page for Podcasts for Kids by AI",
+      "changes": [
+        "Content updated with latest information"
+      ]
+    }
+  ]
+}
